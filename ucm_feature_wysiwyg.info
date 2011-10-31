@@ -1,0 +1,8 @@
+core = "7.x"
+dependencies[] = "features"
+dependencies[] = "wysiwyg"
+description = "This enables a wysiwyg module for this site"
+name = "Wysiwyg Feature"
+package = "Features"
+project = "ucm_feature_wysiwyg"
+version = "7.x-1.0"

@@ -4,19 +4,19 @@
  * Code for the Wysiwyg Feature.
  */
 
-include_once('ucm_feature_wysiwyg.features.inc');
+include_once('cms_feature_wysiwyg.features.inc');
 
 /**
  * Implements hook_wysiwyg_editor_settings_alter().
  *
  */
-function ucm_feature_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
+function cms_feature_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
   if ($context['profile']->editor == 'ckeditor') {
     $tools = array_flip($settings['toolbar'][0]);
     $tools2 = $tools;
 
     $tools['-'] = 42;
-    $map = _ucm_wysiwyg_feature_plugin_map();
+    $map = _cms_wysiwyg_feature_plugin_map();
     $items = 0;
    
     foreach ($map as $key => $toolgroup) {
@@ -64,7 +64,7 @@ function ucm_feature_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context)
   }
 }
   
-function _ucm_wysiwyg_feature_plugin_map() {
+function _cms_wysiwyg_feature_plugin_map() {
   $map = array(
   array('Source', '-', 'Save', 'NewPage', 'Preview', '-', 'Templates'),
   array('Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Print', 'SpellChecker', 'Scayt'),

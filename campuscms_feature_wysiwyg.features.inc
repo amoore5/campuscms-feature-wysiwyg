@@ -1,14 +1,14 @@
 <?php
 /**
  * @file
- * cms_feature_wysiwyg.features.inc
+ * campuscms_feature_wysiwyg.features.inc
  */
 
 
 /**
  * Implementation of hook_default_wysiwyg_profile().
  */
-function cms_feature_wysiwyg_default_wysiwyg_profile() {
+function campuscms_feature_wysiwyg_default_wysiwyg_profile() {
   $items = array();
   $items['full_html'] = entity_import('wysiwyg_profile', '{
     "format" : "full_html",

@@ -56,7 +56,7 @@ function campuscms_feature_wysiwyg_default_wysiwyg_profile() {
           "SpellChecker" : 1,
           "Scayt" : 1
         },
-        "drupal" : { "break" : 1 }
+        "drupal" : { "break" : 0 }
       },
       "toolbar_loc" : "top",
       "toolbar_align" : "left",
@@ -120,7 +120,7 @@ function campuscms_feature_wysiwyg_default_wysiwyg_profile() {
           "SpellChecker" : 1,
           "Scayt" : 1
         },
-        "drupal" : { "break" : 1 }
+        "drupal" : { "break" : 0 }
       },
       "toolbar_loc" : "top",
       "toolbar_align" : "left",

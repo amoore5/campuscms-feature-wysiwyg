@@ -4,6 +4,7 @@ api = 2
 
 ; Contrib modules
 projects[entity] = 1.0-rc1
+projects[libraries] = 1.0
 projects[wysiwyg][version] = 2.1
 projects[wysiwyg][patch][http://drupal.org/files/issues/wysiwyg-7.x-2.x-entity-exportables-624018-208_drush_make.patch] = http://drupal.org/files/issues/wysiwyg-7.x-2.x-entity-exportables-624018-208_drush_make.patch
 ; Ckeditor

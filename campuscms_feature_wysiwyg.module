@@ -18,7 +18,7 @@ function campuscms_feature_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $co
     $tools['-'] = 42;
     $map = _campuscms_wysiwyg_feature_plugin_map();
     $items = 0;
-   
+
     foreach ($map as $key => $toolgroup) {
       if ($toolgroup == '/') {
         // When there have been no items in this row
@@ -26,15 +26,15 @@ function campuscms_feature_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $co
         if ($items == 0) {
           unset($map[$key]);
         }
-       
+
         $items = 0;
         continue;
       }
-   
+
       if (!is_array($toolgroup)) {
         continue;
       }
-   
+
       foreach ($toolgroup as $k => $tool) {
         if (!isset($tools[$tool])) {
           unset($map[$key][$k]);
@@ -44,7 +44,7 @@ function campuscms_feature_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $co
           $items++;
         }
       }
-   
+
       if (count($map[$key]) == 0) {
         unset($map[$key]);
       }
@@ -55,15 +55,18 @@ function campuscms_feature_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $co
     // Renumber
     $map[] = array_values(array_flip($tools2));
     $map = array_values($map);
-   
+
     $settings['toolbar'] = $map;
-   
+
     // Set language
     global $language;
     $settings['language'] = $language->language;
+
+    // Prompt the user to cleanup the text if pasted from word.
+    $settings['pasteFromWordPromptCleanup'] = TRUE;
   }
 }
-  
+
 function _campuscms_wysiwyg_feature_plugin_map() {
   $map = array(
   array('Source', '-', 'Save', 'NewPage', 'Preview', '-', 'Templates'),
@@ -81,6 +84,6 @@ function _campuscms_wysiwyg_feature_plugin_map() {
   array('TextColor', 'BGColor'),
   array('Maximize', 'ShowBlocks', '-', 'About'),
   );
- 
+
   return $map;
 }

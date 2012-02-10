@@ -56,7 +56,6 @@ function campuscms_feature_wysiwyg_default_wysiwyg_profile() {
           "SpellChecker" : 1,
           "Scayt" : 1
         },
-        "drupal" : { "break" : 0 }
       },
       "toolbar_loc" : "top",
       "toolbar_align" : "left",
@@ -67,7 +66,7 @@ function campuscms_feature_wysiwyg_default_wysiwyg_profile() {
       "convert_fonts_to_spans" : 1,
       "remove_linebreaks" : 1,
       "apply_source_formatting" : 1,
-      "paste_auto_cleanup_on_paste" : 0,
+      "paste_auto_cleanup_on_paste" : 1,
       "block_formats" : "p,h2,h3,h4,div",
       "css_setting" : "theme",
       "css_path" : "",
@@ -120,7 +119,6 @@ function campuscms_feature_wysiwyg_default_wysiwyg_profile() {
           "SpellChecker" : 1,
           "Scayt" : 1
         },
-        "drupal" : { "break" : 0 }
       },
       "toolbar_loc" : "top",
       "toolbar_align" : "left",
@@ -131,7 +129,7 @@ function campuscms_feature_wysiwyg_default_wysiwyg_profile() {
       "convert_fonts_to_spans" : 1,
       "remove_linebreaks" : 1,
       "apply_source_formatting" : 1,
-      "paste_auto_cleanup_on_paste" : 0,
+      "paste_auto_cleanup_on_paste" : 1,
       "block_formats" : "p,h2,h3,h4,div",
       "css_setting" : "theme",
       "css_path" : "",
